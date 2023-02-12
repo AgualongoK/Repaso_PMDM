@@ -3,4 +3,5 @@
     <string name="saludo">Esto es un ejemplo de ejecución</string>
     <string name="saludo2">Esto es otra linea</string>
     <string name="texto_pulsar">Pulsar</string>
+    <string name="texto_pasar">Pasar</string>
 </resources>

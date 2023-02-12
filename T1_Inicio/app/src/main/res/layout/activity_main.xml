@@ -23,6 +23,34 @@
         android:layout_gravity="center_horizontal"
         android:id="@+id/texto_bienvenida"></TextView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/paddingNormal">
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/texto_pulsar"
+            android:layout_marginRight="20dp"
+            android:id="@+id/boton_pulsar1"></Button>
+
+        <Button
+            android:layout_marginRight="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/texto_pasar"
+            android:id="@+id/boton_pasar"></Button>
+
+    </LinearLayout>
+
     <EditText
         android:id="@+id/mensaje"
         android:layout_width="match_parent"

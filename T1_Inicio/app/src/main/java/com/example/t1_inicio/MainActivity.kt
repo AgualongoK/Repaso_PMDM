@@ -3,15 +3,19 @@ package com.example.t1_inicio
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var botonPulsar: Button
     lateinit var textoSaludo: TextView
     lateinit var campoTexto : EditText
+    lateinit var botonPasar : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         campoTexto = findViewById(R.id.mensaje)
         botonPulsar =  findViewById(R.id.boton_pulsar)
         textoSaludo = findViewById(R.id.texto_bienvenida)
+        botonPasar = findViewById(R.id.boton_pasar)
 
         botonPulsar.setOnClickListener({
             /*// textoSaludo.setText("Primera app completa")
@@ -37,6 +42,18 @@ class MainActivity : AppCompatActivity() {
                 Log.v("avisos"," texto introducido vacío")
             }
         })
+
+        // onClickListener --> recibe un View (elemento grafico), elemento que ha producido el evento
+        botonPasar.setOnClickListener({view : View ->
+            // Toast --> notificacion basica
+            //Toast.makeText(applicationContext, "Toast completada", Toast.LENGTH_LONG).show()
+
+                var notification = Snackbar.make(view,"Seguro que quieres cerrar la notificacion?",Snackbar.LENGTH_INDEFINITE)
+                notification.setAction("Aceptar", {
+                    notification.dismiss()
+                })
+                notification.show()
+                })
     }
 
     override fun onStart() {

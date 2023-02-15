@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:scaleType="center"
         android:src="@drawable/androide"
+        android:id="@+id/imagen_android"
         ></ImageView>
 
 </LinearLayout>

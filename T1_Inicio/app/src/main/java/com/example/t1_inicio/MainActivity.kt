@@ -117,7 +117,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         var datos: Bundle = Bundle()
                         datos.putString("nombre",campoTexto.text.toString())
                         datos.putInt("edad", 30)
-                        startActivity(intent, datos)
+                        intent.putExtras(datos)
+                        startActivity(intent)
                     })
                 notificacion.show();
             }

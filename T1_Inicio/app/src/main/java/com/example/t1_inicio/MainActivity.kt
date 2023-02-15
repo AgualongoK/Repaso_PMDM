@@ -113,6 +113,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         // metodo que hace que la pantalla anterior NO quede en segundo plano
                         //finish()
 
+                        // bundle -> sirve para pasar datos entre activities
                         var datos: Bundle = Bundle()
                         datos.putString("nombre",campoTexto.text.toString())
                         datos.putInt("edad", 30)

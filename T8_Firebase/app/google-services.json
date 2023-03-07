@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "254446037457",
+    "firebase_url": "https://fir-ceskap-default-rtdb.firebaseio.com",
+    "project_id": "fir-ceskap",
+    "storage_bucket": "fir-ceskap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254446037457:android:39c0b2c0c0be8dfc3fd8f0",
+        "android_client_info": {
+          "package_name": "com.example.t8_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254446037457-195aa4f8nl7q48ea4iugnqk33fpqedhp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7ICcZ-ypl5IytFbEsCzktT85SqsRXFO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254446037457-195aa4f8nl7q48ea4iugnqk33fpqedhp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

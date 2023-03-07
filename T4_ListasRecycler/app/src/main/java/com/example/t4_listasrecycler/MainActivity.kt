@@ -7,15 +7,22 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.t4_listasrecycler.adapter.AdaptadorUsuarios
 import com.example.t4_listasrecycler.databinding.ActivityMainBinding
 import com.example.t4_listasrecycler.model.Usuario
+import com.google.android.material.snackbar.Snackbar
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), AdaptadorUsuarios.OnRecyclerUsuarioListener{
 
     private lateinit var binding: ActivityMainBinding;
     private lateinit var listaUsuarios: ArrayList<Usuario>
+    private lateinit var listaUsuariosFiltrada: ArrayList<Usuario>
     private lateinit var adaptadorUsuarios: AdaptadorUsuarios;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //lista con todos los usuarios que se llaman borja y su telefono es 1234
+        listaUsuariosFiltrada = listaUsuarios.filter { usuario -> usuario.nombre == "Borja" && usuario.telefono == 1234 } as ArrayList<Usuario>
+        adaptadorUsuarios.cambiarDeLista(listaUsuariosFiltrada)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -58,6 +65,16 @@ class MainActivity : AppCompatActivity() {
         listaUsuarios.add(Usuario("Austin","Smith",8367,R.drawable.hombre))
 
         adaptadorUsuarios = AdaptadorUsuarios(listaUsuarios, this);
+
+        adaptadorUsuarios.funcionComunicar = { Snackbar.make(binding.root, it.nombre, Snackbar.LENGTH_SHORT).show() }
+    }
+
+    override fun onUsuarioSelected(usuario: Usuario) {
+        Snackbar.make(binding.root, "Comunicado ${usuario.nombre}", Snackbar.LENGTH_SHORT).show()
+    }
+
+    override fun onUsuarioSelected(usuario: Usuario, posicion: Int) {
+        Snackbar.make(binding.root, "Comunicado ${usuario.nombre} ${posicion}", Snackbar.LENGTH_SHORT).show()
     }
 
 

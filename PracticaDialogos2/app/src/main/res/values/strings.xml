@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PracticaDialogos2</string>
+    <string-array name="puestosTrabajo">
+        <item>Administrativo</item>
+        <item>Comercial</item>
+        <item>Soporte</item>
+        <item>Informática</item>
+    </string-array>
+</resources>
